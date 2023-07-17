@@ -4,11 +4,7 @@ $name = $_GET["name"] ?? "";
 $email = $_GET["mail"] ?? "";
 $age = $_GET["age"] ?? "";
 
-var_dump($name);
-var_dump($email);
-var_dump($age);
-
-if (strlen($name) <= 3 || !strpos($email, "@") || !strpos($email, ".")) {
+if (strlen($name) <= 3 || !strpos($email, "@") || !strpos($email, ".") || !is_numeric($age)) {
     $message = "Accesso negato";
 } else {
     $message = "Accesso riuscito";
