@@ -8,7 +8,7 @@ var_dump($name);
 var_dump($email);
 var_dump($age);
 
-if (strlen($name) <= 3) {
+if (strlen($name) <= 3 || !strpos($email, "@") || !strpos($email, ".")) {
     $message = "Accesso negato";
 } else {
     $message = "Accesso riuscito";
